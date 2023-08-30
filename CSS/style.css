@@ -1,0 +1,264 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+body {
+    margin: 0px;
+    background-color: aliceblue;
+    overflow-x: hidden;
+}
+.container {
+    width: 97%;
+    max-width: 1000px;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid gainsboro;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+.search-holder form > input[type="search"]{
+    padding: 10px;
+    border: 1px solid gainsboro;
+}
+.search-holder form > button[type="submit"] {
+    margin-left: -5px;
+    padding: 11px;
+    border: 0px;
+    background-color: black;
+    color: white;
+}
+.main-menu {
+    background-color: black;
+    color: white;
+}
+.main-menu > ul {
+    display: flex;
+    justify-content: start;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.main-menu > ul > li > a {
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.main-menu > ul > li > a:hover {
+    background-color: orange; 
+}
+.drop {
+    display: none;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.drop > li > a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+}
+.drop > li > a:hover {
+    background-color: orange;
+}
+.main-menu > ul > li:hover > .drop {
+    display: block;
+}
+.lSPager {
+    margin-top: -25px !important;
+}
+.content-holder {
+    display: flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    border-bottom: 1px solid gainsboro;
+}
+.content-holder > .content {
+    width: 80%;
+    padding: 25px;
+    background-color: white;
+}
+.content-holder > .content h1 ~ h2 {
+    font-size: 1em;
+    color: darkgray;
+}
+.sidebar {
+    width: 20%;
+    padding: 25px;
+}
+.sidebar > .widget > h3 {
+    color: white;
+}
+.sidebar > .widget > ul,
+.footer-widget > ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.sidebar > .widget > ul > li > a,
+.footer-widget > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+.sidebar > .widget > ul > li > a:hover,
+.footer-widget > ul > li > a:hover {
+    color: black;
+}
+.footer-widget-holder {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(31,31,31);
+    color: white;
+}
+.footer-widget {
+    padding: 25px;
+    font-size: small;
+}
+.site-footer {
+    padding: 25px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.site-footer > p {
+    margin: 0px;
+}
+
+/* Services and Products */
+.services-holder,
+.products-holder {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+.service,
+.product {
+    padding: 20px;
+    border: 1px solid gainsboro;
+}
+.service > a,
+.product > a {
+    color: teal;
+    text-decoration: none;
+}
+.product > img {
+    width: 100%;
+    height: auto;
+}
+/* Services and Products */
+/* About */
+.about-holder {
+    padding: 25px;
+}
+/* About */
+/* Contact */
+.gmap {
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid gainsboro;
+}
+.gmap > iframe {
+    width: 100%;
+    height: 400px;
+}
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-form,
+.time-contact {
+    width: 50%;
+    padding: 25px;
+}
+.contact-form > form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form > form input,
+.contact-form > form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px;
+}
+.contact-form > form button {
+    display: inline-block;
+    width: 105%;
+    padding: 10px;
+}
+/* Contact */
+/* Mobile Menu */
+.mobile-menu {
+    display: none !important;
+}
+/* Mobile Menu */
+/* Responsive Web Design */
+@media screen and (max-width: 750px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mobile-menu {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+    .main-menu > ul:nth-of-type(2) {
+        display: none;
+        flex-direction: column;
+        border-top: 1px solid gainsboro;
+    }
+    .main-menu > ul > li > a,
+    .drop > li > a {
+        display: block;
+        width: auto;
+    }
+    #adaptive img {
+        width: 100%;
+    }
+    .content-holder {
+        flex-direction: column;
+    }
+    .content-holder > .content,
+    .content-holder > .sidebar {
+        width: auto;
+    }
+    .footer-widget-holder {
+        flex-direction: column;
+    }
+    .footer-widget-holder > .footer-widget {
+        padding: 10px 25px;
+    }
+    /* Services and Products */
+    .services-holder,
+    .products-holder {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Services and Products */
+    /* Contact */
+    .contact-details {
+        flex-direction: column;
+    }
+    .contact-form,
+    .time-contact {
+        width: auto;
+        padding: 10px 25px;
+    }
+    .contact-form > form input,
+    .contact-form > form textarea {
+        width: 90%;
+        padding: 10px 25px;
+    }
+    .contact-form > form button {
+        width: 100%;
+    }
+    /* Contact */
+}
+/* Responsive Web Design */
